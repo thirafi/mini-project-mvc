@@ -39,8 +39,8 @@ jobs:
     - name: Push Docker image to AWS EC2
       run: |
         eval $(aws ecr get-login --no-include-email --region ap-southeast-1)
-        docker tag alta-project 18.141.175.116/alta-project
-        docker push 18.141.175.116/alta-project
+        docker tag alta-project mlinkaja111/alta-project
+        docker push mlinkaja111/alta-project
 
     - name: SSH into EC2 and deploy
       uses: appleboy/ssh-action@master
@@ -51,4 +51,4 @@ jobs:
         script: |
           docker stop testing2 || true
           docker rm testing2 || true
-          docker run -d --name testing2 -p 8080:8080 18.141.175.116/alta-project
+          docker run -d --name testing2 -p 8080:8080 mlinkaja111/alta-project
