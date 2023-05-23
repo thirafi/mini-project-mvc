@@ -17,10 +17,10 @@ var DB *gorm.DB
 // "DB_Name":     "structure_project",
 func InitDB() *gorm.DB {
 	config := map[string]string{
-		"DB_Username": "alta",
-		"DB_Password": "alta",
+		"DB_Username": "root",
+		"DB_Password": "Qoala202!",
 		"DB_Port":     "3306",
-		"DB_Host":     "172.20.10.2",
+		"DB_Host":     "database-2.c3fzsopw9aux.ap-southeast-1.rds.amazonaws.com",
 		"DB_Name":     "mini_project",
 	}
 
